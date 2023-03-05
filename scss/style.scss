@@ -1,0 +1,273 @@
+@use 'custom';
+$soft-blue: hsl(231, 69%, 60%);
+
+// nav section
+nav {
+    max-width: 1234px;
+    padding: 20px;
+    margin: auto;
+}
+
+.nav-item {
+    letter-spacing: 1px;
+
+    .btn-info {
+        margin: 0 2rem;
+    }
+}
+
+.nav-link {
+    text-transform: uppercase;
+    color: hsl(229, 31%, 21%);
+
+    &:hover {
+        color: hsl(0, 94%, 66%);
+    }
+}
+
+.btn-info {
+    color: white;
+
+    &:hover {
+        background-color: white;
+        color: hsl(0, 94%, 66%);
+        border-color: hsl(0, 94%, 66%);
+    }
+}
+
+//hero section
+#hero {
+    max-width: 1234px;
+
+    .pr-3 {
+        padding-right: 100px;
+    }
+}
+
+.decorative {
+    height: 354px;
+    width: 43%;
+    background-color: $soft-blue;
+    display: inline-block;
+    position: absolute;
+    bottom: 186px;
+    right: 0;
+    z-index: -1;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+}
+
+.btn {
+    box-shadow: 0px 5px 5px #5368df54;
+}
+
+.btn-secondary {
+    margin-left: 15px;
+}
+
+@media(max-width: 767px) {
+    #hero {
+        flex-direction: column-reverse;
+        margin-top: 100px;
+
+        img {
+            width: 100%;
+        }
+
+        h1 {
+            margin-top: 60px;
+            text-align: center;
+        }
+
+        .text {
+            padding: 0 20px;
+        }
+
+        .decorative {
+            bottom: 396px;
+            height: 263px;
+            width: 81%;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+        }
+    }
+}
+
+//sections universal
+.sections {
+    text-align: center;
+    max-width: 1234px;
+
+    .text {
+        max-width: 500px;
+    }
+}
+
+@media(max-width: 767px) {
+    .sections {
+        padding: 0 20px;
+    }
+}
+
+//features section
+.features {
+    .nav-link {
+        text-transform: none;
+        color: gray;
+    }
+
+    .nav-tabs {
+        justify-content: center;
+
+        .nav-link.active,
+        .nav-item.show .nav-link {
+            border: none;
+            border-bottom: hsl(0, 94%, 66%) 3px solid;
+        }
+
+        .nav-link.active {
+            color: hsl(229, 31%, 21%);
+        }
+
+        .nav-link:hover,
+        .nav-link:focus {
+            color: hsl(0, 94%, 66%);
+            border: none;
+        }
+    }
+
+    .tab-content {
+        text-align: left;
+        max-width: 1234px;
+
+        .tab__text {
+            padding-left: 200px;
+        }
+    }
+}
+
+//features in mobile
+@media(max-width: 767px){
+    .tab-content{
+        .tab-pane{
+            div{
+                flex-direction: column;
+                img{
+                    width: 100%;
+                }
+                .tab__text{
+                    padding-left: 0;
+                }
+            }
+        }
+    }
+}
+
+//cards
+.card {
+    box-shadow: 0px 10px 15px #5368df1f;
+    border: none;
+
+    .card-body {
+        padding-bottom: 25px;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    hr {
+        border-top: 5px dotted;
+        margin: 2rem 0;
+    }
+
+    a {
+        width: 100%;
+    }
+}
+
+.card-img-top {
+    width: 40%;
+    margin: 20px auto;
+}
+
+.card2 {
+    margin-top: 40px;
+}
+
+.card3 {
+    margin-top: 80px;
+}
+
+@media(max-width: 767px) {
+    .card3 {
+        margin-top: 40px;
+    }
+}
+
+// accordion section
+.container {
+    .container {
+        max-width: 510px;
+    }
+}
+
+//form section
+.purple-box {
+    background-color: $soft-blue;
+
+    .container {
+        padding: 70px 0;
+        max-width: 600px;
+        text-align: center;
+
+        p {
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            padding-bottom: 20px;
+        }
+
+        h2 {
+            color: white;
+            padding-bottom: 20px;
+        }
+    }
+
+    form {
+        display: flex;
+        justify-content: center;
+
+        input {
+            &.btn {
+                margin-left: 20px;
+            }
+
+            &::placeholder {
+                color: gray;
+            }
+        }
+
+        .form-group,
+        .form-control {
+            width: 100%;
+        }
+    }
+}
+
+//footer
+.navbar-dark{
+    background-color: hsl(229, 31%, 21%);
+    .nav-link{
+        color: white;
+        font-size: 14px;
+    }
+    .logos{
+        img{
+            padding-left: 15px;
+        }
+    }
+}
